@@ -9,8 +9,8 @@
 
 union vec4 {
     __m128 vector;
-    float x, y, z, w;
-    float r, g, b, a;
+    struct { float x, y, z, w; };
+    struct { float r, g, b, a; };
 };
 
 vec4 __vectorcall operator+(const vec4 &, const vec4 &);
